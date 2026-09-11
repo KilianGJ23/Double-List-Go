@@ -16,7 +16,21 @@ func NewDoubleList[T any]() *DoubleList[T] {
 	}
 }
 
-func (l *DoubleList[T]) Add(e T) bool {
+func (l *DoubleList[T]) AddFirst(e T) bool {
+	newNode := NewDoubleNode(e)
+
+	if l.head == nil {
+		l.head = newNode
+	} else {
+		newNode.SetNext(l.head)
+		l.head.SetPrevious(newNode)
+		l.head = newNode
+	}
+
+	return true
+}
+
+func (l *DoubleList[T]) AddFinal(e T) bool {
 	newNode := NewDoubleNode(e)
 
 	if l.head == nil {
@@ -33,28 +47,43 @@ func (l *DoubleList[T]) Add(e T) bool {
 	return true
 }
 
-func (l *DoubleList[T]) Remove(o T) bool {
-	aux := l.head
+func (l *DoubleList[T]) RemoveFirst() bool {
+	if l.head == nil {
+		return false
+	}
 
-	for aux != nil {
-		if reflect.DeepEqual(o, aux.GetValue()) {
-			if aux.GetPrevious() == nil {
-				l.head = aux.GetNext()
-				if l.head != nil {
-					l.head.SetPrevious(nil)
-				}
-			} else {
-				aux.GetPrevious().SetNext(aux.GetNext())
-				if aux.GetNext() != nil {
-					aux.GetNext().SetPrevious(aux.GetPrevious())
-				}
-			}
-			return true
-		}
+	if l.head.GetNext() == nil {
+		l.head = nil
+		return true
+	}
+
+	next := l.head.GetNext()
+	next.SetPrevious(nil)
+	l.head.SetNext(nil)
+	l.head = next
+
+	return true
+}
+
+func (l *DoubleList[T]) RemoveFinal() bool {
+	if l.head == nil {
+		return false
+	}
+
+	if l.head.GetNext() == nil {
+		l.head = nil
+		return true
+	}
+
+	aux := l.head
+	for aux.GetNext() != nil {
 		aux = aux.GetNext()
 	}
 
-	return false
+	aux.GetPrevious().SetNext(nil)
+	aux.SetPrevious(nil)
+
+	return true
 }
 
 func (l *DoubleList[T]) Size() int {
