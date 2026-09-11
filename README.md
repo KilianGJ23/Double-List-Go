@@ -1,7 +1,5 @@
 # Implementación de Lista Doblemente Enlazada en Go
 
----
-
 ## Descripción del Proyecto
 
 Este proyecto consiste en el diseño e implementación de una **Lista Doblemente Enlazada (`DoubleList`)** desarrollada de manera nativa en el lenguaje de programación **Go (Golang)**.
@@ -15,8 +13,6 @@ El proyecto se fundamenta en tres pilares del paradigma de programación adoptad
 * **Paradigma Imperativo y Estructurado:** El flujo de los algoritmos se expresa mediante secuencias de instrucciones, condicionales y ciclos iterativos explícitos encargados de manipular directamente los punteros de memoria y actualizar las referencias bidireccionales de los nodos.
 
 * **Orientación a Objetos Basada en Tipos y Métodos:** Go prescinde de la herencia y de las clases tradicionales. En su lugar, el encapsulamiento se logra definiendo estructuras de datos (`struct`) asociadas a métodos con receptores (*receiver methods*), permitiendo tratar a `DoubleList` y `DoubleNode` como tipos de datos abstractos (TDA) autónomos.
-
----
 
 ## Requisitos de Software e Instalación
 
@@ -41,9 +37,7 @@ Para compilar y ejecutar este proyecto se requiere tener instalado el compilador
    go version
    ```
 
----
-
-## 🚀 Instrucciones de Ejecución
+## Instrucciones de Ejecución
 
 Primero, clone el repositorio público en su máquina local:
 
@@ -79,8 +73,6 @@ go run main.go
 go build -o double-list-go.exe main.go
 .\double-list-go.exe
 ```
-
----
 
 ## Autores
 
