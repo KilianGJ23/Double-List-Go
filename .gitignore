@@ -1,0 +1,21 @@
+# Binarios compilados
+/double-list-go
+/double-list-go.exe
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+bin/
+dist/
+
+# Objetos de prueba y cobertura
+*.test
+*.out
+
+# Entornos y herramientas de desarrollo / IDEs
+.idea/
+.vscode/
+*.swp
+*~
+.DS_Store
