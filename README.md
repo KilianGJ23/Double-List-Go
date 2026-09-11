@@ -38,20 +38,6 @@ Para compilar y ejecutar este proyecto se requiere tener instalado el compilador
    go version
    ```
 
-## Estructura del Proyecto
-
-El proyecto mantiene una estructura simple, limpia y directa:
-
-```text
-Double-List-Go/
-├── structure/
-│   ├── double_node.go       # Implementación del nodo genérico DoubleNode[T]
-│   └── double_list.go       # Implementación de la lista doblemente enlazada DoubleList[T]
-├── main.go                  # Programa principal con pruebas y verificación de métodos
-├── go.mod                   # Módulo y versión de Go
-└── README.md                    # Documentación del proyecto
-```
-
 ## Instrucciones de Ejecución
 
 Primero, clone el repositorio público en su máquina local:

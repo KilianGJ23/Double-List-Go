@@ -1,10 +1,9 @@
 package main
 
 import (
+	"double-list-go/structure"
 	"fmt"
 	"strings"
-
-	"double-list-go/structure"
 )
 
 func main() {
