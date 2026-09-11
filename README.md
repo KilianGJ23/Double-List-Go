@@ -20,15 +20,16 @@ Para compilar y ejecutar este proyecto se requiere tener instalado el compilador
 
 * **Versión de Go utilizada en el desarrollo:** **Go 1.27** *(o cualquier versión compatible igual o superior a Go 1.18, requerida para el soporte de genéricos)*.
 
-* **Sitio oficial de descarga:** [https://go.dev/dl/](https://go.dev/dl/)
-
 ### ¿Cómo instalar Go?
 
 1. **Descarga:** Ingrese a [go.dev/dl](https://go.dev/dl/) y descargue el instalador correspondiente a su sistema operativo.
 
 2. **Instalación:**
+
    * **Linux:** Descomprima el archivo descargado en `/usr/local` (por ejemplo: `sudo tar -C /usr/local -xzf go1.27.linux-amd64.tar.gz`) y agregue `export PATH=$PATH:/usr/local/go/bin` en su archivo `~/.bashrc` o `~/.zshrc`.
+
    * **macOS:** Ejecute el paquete instalador `.pkg` descargado o instálelo vía Homebrew con `brew install go`.
+   
    * **Windows:** Ejecute el instalador `.msi` y siga las instrucciones del asistente (el instalador configura automáticamente las variables de entorno).
 
 3. **Verificación:** Abra una terminal o consola y compruebe la instalación ejecutando:
