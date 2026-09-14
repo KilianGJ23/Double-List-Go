@@ -35,5 +35,4 @@ func main() {
 	fmt.Println("\n--- Comprobación (Contains) ---")
 	fmt.Println("¿Contiene el 20?:", lista.Contains(20))
 	fmt.Println("¿Contiene el 99?:", lista.Contains(99))
-
 }
